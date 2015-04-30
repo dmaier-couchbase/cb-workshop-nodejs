@@ -16,7 +16,7 @@ bucket.get( COMP_KEY , function(err, res) {
         
         var comp = res.value;
         
-        bucket.getMulti(comp.users , comp , function(err, res) {
+        bucket.getMulti(comp.users, function(err, res) {
 	  
             if (err) {
 	           console.log('One or more operations failed', err);
