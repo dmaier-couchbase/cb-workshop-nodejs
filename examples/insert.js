@@ -1,4 +1,4 @@
-ouchbase = require('couchbase');
+couchbase = require('couchbase');
 var cluster = new couchbase.Cluster('couchbase://localhost');
 var bucket = cluster.openBucket('workshop', 'test');
 
