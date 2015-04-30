@@ -12,13 +12,13 @@ user.email = 'david.maier@couchbase.com';
 
 bucket.insert('user::' + user.uid , user , function(err, res) {
 	  
-	  if (err) {
-		      console.log('operation failed', err);
-		          return;
-			    }
+    if (err) {
+	
+      console.log('operation failed', err);
+      return;
+    }
 
-	    console.log('success!', res);
-
+    console.log('success!', res);
 });
 
 var comp = {};
@@ -28,12 +28,13 @@ comp.domain = 'couchbase.com';
 
 bucket.insert('comp::' + comp.domain , comp , function(err, res) {
 	  
-	  if (err) {
-		      console.log('operation failed', err);
-		          return;
-			    }
+    if (err) {
+        
+        console.log('operation failed', err);
+        return;
+    }
 
-	    console.log('success!', res);
+    console.log('success!', res);
 
 });
 
