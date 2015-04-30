@@ -20,3 +20,20 @@ bucket.insert('user::' + user.uid , user , function(err, res) {
 	    console.log('success!', res);
 
 });
+
+var comp = {};
+comp.name = 'Couchbase';
+comp.address = 'Somewhere';
+comp.domain = 'couchbase.com';
+
+bucket.insert('comp::' + comp.domain , comp , function(err, res) {
+	  
+	  if (err) {
+		      console.log('operation failed', err);
+		          return;
+			    }
+
+	    console.log('success!', res);
+
+});
+
