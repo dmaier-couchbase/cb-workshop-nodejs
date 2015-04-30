@@ -20,7 +20,7 @@ bucket.get( COMP_KEY , function(err, res) {
         
         var comp = res.value;
         
-        if ( typeof comp.users !== undefined )
+        if ( typeof comp.users !== 'undefined' )
         {
             comp.users.push(USER_KEY);
         }
