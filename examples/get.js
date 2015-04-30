@@ -3,9 +3,9 @@ var cluster = new couchbase.Cluster('couchbase://localhost');
 var bucket = cluster.openBucket('workshop', 'test');
 
 var UID = 'dmaier';
-var KEY = 'user::' + uid;
+var KEY = 'user::' + UID;
 
-bucket.get(KEY , function(err, res) {
+bucket.get( KEY , function(err, res) {
 	  
     if (err) {
 	
