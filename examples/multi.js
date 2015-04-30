@@ -14,6 +14,8 @@ bucket.get( COMP_KEY , function(err, res) {
     {
         console.log('Successfully retrieved the company', res);
         
+        var comp = res.value;
+        
         bucket.getMulti(comp.users , comp , function(err, res) {
 	  
             if (err) {
