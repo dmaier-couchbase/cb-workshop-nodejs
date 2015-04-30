@@ -5,7 +5,7 @@ var bucket = cluster.openBucket('workshop', 'test');
 var UID = 'dmaier';
 var KEY = 'user::' + UID;
 
-bucket.delete( KEY , function(err, res) {
+bucket.remove( KEY , function(err, res) {
 	  
     if (err) {
 	
