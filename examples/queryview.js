@@ -4,8 +4,8 @@ var bucket = cluster.openBucket('workshop', 'test');
 
 var ViewQuery = couchbase.ViewQuery;
 
-var query = ViewQuery.from('users', 'by_birthday').stale(ViewQuery.Update.BEFORE).reduce(false);
-//var query = ViewQuery.from('users', 'by_birthday').stale('false').reduce(true).group_level(1);
+//var query = ViewQuery.from('users', 'by_birthday').stale(ViewQuery.Update.BEFORE).reduce(false);
+var query = ViewQuery.from('users', 'by_birthday').stale(ViewQuery.Update.BEFORE).group_level(1);
 
 bucket.query(query, function(err, results) {
    
